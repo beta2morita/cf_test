@@ -2,26 +2,46 @@
 <html>
   <head>
     <title>CfTest</title>
-    <%= csrf_meta_tags %>
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-
-		<nav>
-		  <ul>
-		    <li><a href="index">Home</a></li>
-		    <li><a href="about">About</a></li>
-		    <li><a href="contact">Contact</a></li>
-		  </ul>
-		</nav>  
+	  	<header class="container">
+	  		<a href="#" title="Back to top" id="logo">
+	  			<%= image_tag("logo_s.png", class: "img-responsive") %>
+	  		</a>
+	  		<h2>Your source for used bikes in Berlin</h2>
+			<nav>
+				<a class="default <%= 'active' if current_page?(static_pages_index_path) %>" href="index">Home</a>
+				<a class="default <%= 'active' if current_page?(static_pages_about_path) %>" href="about">About</a>
+				<a class="default <%= 'active' if current_page?(static_pages_contact_path) %>" href="contact">Contact</a>
+			</nav> 
+			</header> 
 			
     <%= yield %>
 
-		<footer>
-		  &copy; 2015 Bike Berlin
+		<footer class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="#" title="Back to top">
+		  			Back to top
+		  		</a>
+			  	<p style="margin-top: 70px;">&copy; 2015 Bike Berlin</p>
+				</div><!--end col-sm-4-->
+				<div class="col-sm-8" style="text-align: right;">
+					<p>Bike Shop Berlin GmbH<br>
+					Main Street 1</p>
+					<p>12345 Berlin</p>
+					<a href="mailto:shop@bikeberlin.de" class="link">shop@bikeberlin.de</a>
+        	<p>030 - 2125 3201</p>
+				</div><!--end col-sm-8-->
+		  <div><!--end row-->
 		</footer>
 
   </body>
