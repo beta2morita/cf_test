@@ -45,22 +45,21 @@ nav a {
 	line-height: 74px;
 	height: 70px;
 	color: #000;
+	font-size: 2.4rem;
 	font-weight: 400;
+	transition: all .4s ease-out;	
 }
 
 nav a:link, nav a:visited {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-style: normal;
-	font-size: 2.4rem;
-	font-weight: 400;
 }
 
 nav a.active, nav a.active:hover {
 	color: #fff;
 	background-color: transparent;
 	letter-spacing: 10px;
-	transition: all .4s ease-out;
 }
 
 nav a:hover {
@@ -68,7 +67,6 @@ nav a:hover {
     color: #000;
     letter-spacing: 10px;
     text-decoration: none;
-    transition: all .4s ease-out;
 }
 
 /* typography */
@@ -140,3 +138,28 @@ body { font-size: 14px; font-size: 1.4rem; }
 h1  { font-size: 36px; font-size: 3.6rem; }
 h2 {	font-size: 24px; font-size: 2.4rem;}
 h3 {	font-size: 20px; font-size: 2rem;}
+
+@media (max-width: 768px) { 
+.teaser {
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	right: 5%;
+}
+.teaser h1 {
+	font-size: 3.6rem;
+}
+.teaser h2 {
+	font-size: 2.4rem;
+}
+nav a {
+	font-size: 2rem;
+}
+nav a.active, nav a.active:hover, nav a:hover {
+	letter-spacing: 5px;
+}
+header h2 {
+	font-size: 2rem;
+	bottom: 70px;
+}
+}
