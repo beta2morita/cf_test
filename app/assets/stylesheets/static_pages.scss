@@ -132,6 +132,10 @@ footer a:hover {
 	color: #fff;
 }
 
+.p_controls {
+	min-width: 170px;
+}
+
 /* use font-size based on rem */
 html { font-size: 62.5%; } 
 body { font-size: 14px; font-size: 1.4rem; }
@@ -145,6 +149,9 @@ h3 {	font-size: 20px; font-size: 2rem;}
 	top: 20%;
 	left: 5%;
 	right: 5%;
+}
+.p_controls {
+	min-width: 0px;
 }
 .teaser h1 {
 	font-size: 3.6rem;
