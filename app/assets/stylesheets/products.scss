@@ -3,6 +3,33 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .products {
 
+	.row {
+	  overflow: hidden; 
+	}
+
+	[class*="col-"] p{
+	  min-height: 80px;
+	  border-bottom: 1px solid black;
+	}
+
+	[class*="col-"] h2{
+	  font-weight: bold;
+	}
+
+	[class*="col-"] strong{
+	  margin: 33px;
+	  font-size: 24px;
+	}
+
+	[class*="col-"] {
+	  margin-bottom: 33px;
+	}
+
+		[class*="col-"] .product_box{
+	  border: 1px solid black;
+	  padding: 5px;
+	}
+
 	body {
 	  background-color: #fff;
 	  color: #333;
