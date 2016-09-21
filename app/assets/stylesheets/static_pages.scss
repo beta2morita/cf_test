@@ -80,7 +80,7 @@ h1, h2, h3 {
 /* Format bike-jumbotron with teaser */
 .hero-wrapper {
 	position: relative;
-	height: 750px;
+	height: 850px;
 	margin: 0 -15px;
 }
 
@@ -105,22 +105,23 @@ h1, h2, h3 {
 
 .teaser {
 	position: absolute;
-	top: 20%;
+	top: 0%;
 	left: 20%;
 	right: 20%;
 	text-align: center;
 	z-index: 1;
 	color: #fff;
+	max-width: 640px;
 }
 
 .teaser h1 {
-	font-size: 7.2rem;
+	font-size: 6.0rem;
 	font-weight: bold;
 	text-shadow: rgba(0, 0, 0, 0.86) 0 -1px 1px;
 }
 
 .teaser h2 {
-	font-size: 4.8rem;
+	font-size: 3.6rem;
 }
 
 footer a {
@@ -146,7 +147,7 @@ h3 {	font-size: 20px; font-size: 2rem;}
 @media (max-width: 768px) { 
 .teaser {
 	position: absolute;
-	top: 20%;
+	top: 5%;
 	left: 5%;
 	right: 5%;
 }

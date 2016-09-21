@@ -1,0 +1,8 @@
+<div class="col-sm-4 col-md-3">
+  <div class="product_box">
+    <img class="img-responsive" src="https://dl.dropboxusercontent.com/u/9485125/bike2berlin/<%=product.image_url %>" alt="<%=product.image_url %>">
+    <h2><%= link_to product.name, product %></h2>
+    <p><%= product.description %></p>
+    <strong><%= number_to_currency(product.price, :unit => "€") %></strong>
+  </div>
+</div><!-- /col -->
