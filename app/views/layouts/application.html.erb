@@ -14,10 +14,27 @@
 
   <body>
 	  	<header class="container" style="background-image: url(<%= asset_path 'wall.jpg' %>)">
-	  		<a href="#" title="Back to top" id="logo">
-	  			<%= image_tag("logo_s.png", class: "img-responsive") %>
-	  		</a>
-	  		<h2>Your source for used bikes in Berlin</h2>
+
+	  		<div class="row">
+					<div class="col-xs-6 col-sm-4">
+		  		<a href="#" title="Back to top" id="logo">
+		  			<%= image_tag("logo_s.png", class: "img-responsive") %>
+		  		</a>
+		  	</div>
+		  	<div class="col-xs-6 col-sm-8" style="text-align: right; padding-bottom: 20px;">
+
+		  		<h2>Your source for used bikes in Berlin</h2>
+
+				  <%= form_tag "/products", :method => 'get', class: 'input-group'  do %>
+				    <%= text_field_tag :q, params[:q], class: 'form-control', placeholder: 'Search for...' %>
+				    <span class="input-group-btn">
+				      <%= submit_tag "search", class: "btn btn-default" %>
+				    </span>
+				  <% end %>
+
+		  	</div>
+	  	</div>
+
 			<nav>
 				<a class="default <%= 'active' if (current_page?(root_path) or current_page?(static_pages_index_path)) %>" href="<%= static_pages_index_path %>">Home</a>
 				<a class="default <%= 'active' if request.fullpath.start_with?('/products') %>" href="<%= products_path %>">Shop</a>
@@ -30,13 +47,13 @@
 
 		<footer class="container" style="background-image: url(<%= asset_path 'wall.jpg' %>">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-xs-6">
 					<a href="#" title="Back to top">
 		  			Back to top
 		  		</a>
 			  	<p style="margin-top: 70px;">&copy; 2015 Bike Berlin</p>
 				</div><!--end col-sm-4-->
-				<div class="col-sm-8" style="text-align: right;">
+				<div class="col-xs-6" style="text-align: right;">
 					<p>Bike Shop Berlin GmbH<br>
 					Main Street 1</p>
 					<p>12345 Berlin</p>

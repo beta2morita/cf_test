@@ -15,7 +15,6 @@ header, footer {
 
 a#logo {
 	display: block;
-	width: 50%;
 	max-width: 508px;
 	padding-left: 30px;
 	padding-top: 25px;
@@ -24,8 +23,8 @@ a#logo {
 
 header h2 {
 	color: #fff;
-	width: 30%;
-	position: absolute;
+	width: 100%;
+	text-align: right;
 	right: 30px;
 	text-shadow: rgba(0,0,0,0.86) 0 -1px 1px;
 	line-height: 1.1;
@@ -80,7 +79,7 @@ h1, h2, h3 {
 /* Format bike-jumbotron with teaser */
 .hero-wrapper {
 	position: relative;
-	height: 850px;
+	height: 750px;
 	margin: 0 -15px;
 }
 
