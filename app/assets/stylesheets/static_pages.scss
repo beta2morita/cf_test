@@ -103,6 +103,7 @@ h1, h2, h3 {
 }
 
 .teaser {
+
 	position: absolute;
 	top: 0%;
 	left: 20%;
@@ -111,18 +112,27 @@ h1, h2, h3 {
 	z-index: 1;
 	color: #fff;
 	max-width: 640px;
+
+	h1 {
+		font-size: 6.0rem;
+		font-weight: bold;
+		margin-top: 40px;
+		text-shadow: rgba(0, 0, 0, 0.86) 0 -1px 1px;
+	}
+
+	h2 {
+		font-size: 3.6rem;
+	}
+
+	label {
+		float: left;
+	}
+
+	.btn {
+		float: left;
+	}
 }
 
-.teaser h1 {
-	font-size: 6.0rem;
-	font-weight: bold;
-	margin-top: 40px;
-	text-shadow: rgba(0, 0, 0, 0.86) 0 -1px 1px;
-}
-
-.teaser h2 {
-	font-size: 3.6rem;
-}
 
 footer a {
 	text-decoration: none;
