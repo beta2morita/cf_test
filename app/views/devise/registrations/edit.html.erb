@@ -1,0 +1,48 @@
+<div class="container signin">
+  <div class="form-signin">
+    <h2 class="form-signin-heading">Edit <%= resource_name.to_s.humanize %></h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :email, class: 'sr-only' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control', type: 'email', placeholder: 'Email address' %>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :password, class: 'sr-only' %> 
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', type: 'center', placeholder: 'Password (blank to leave unchanged)' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, class: 'sr-only' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', type: 'center', placeholder: 'Password confirmation' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password, class: 'sr-only' %>
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', type: 'password', placeholder: 'Current password to confirm change' %>
+      </div>
+
+      <% if @minimum_password_length %>
+      <em>Password length: <%= @minimum_password_length %> characters minimum</em>
+      <% end %>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="actions", style="margin-top: 10px;">
+        <%= f.submit "Update", class: 'btn btn-lg btn-primary btn-block' %>
+      </div>
+    <% end %>
+
+    <h3 class="form-signin-heading">Cancel my account</h3>
+
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-lg btn-primary btn-block' %></p>
+
+    <%= link_to "Back", :back %>
+  </div>
+</div>

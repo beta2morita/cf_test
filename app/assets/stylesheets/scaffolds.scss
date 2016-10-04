@@ -1,0 +1,71 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "static_pages";
+
+.products, .users {
+
+	background: image-url("wall.jpg") center center;	
+
+	h1 {
+	font-size: 6.0rem;
+	font-weight: bold;
+	text-shadow: rgba(0, 0, 0, 0.86) 0 -1px 1px;
+	}
+
+
+	.dl-horizontal {
+		color: white;
+		font-size: 1.8rem;
+	}
+
+	@media (max-width: 768px) { 
+
+		h1 {
+			font-size: 3.6rem;
+		}
+	}
+
+
+	.row {
+	  overflow: hidden; 
+	}
+
+	.page-header {
+		border-bottom: none;
+	}
+
+	h1{
+		color: white;
+		font-weight: bold;
+	}
+
+	[class*="col-"] p{
+	  min-height: 80px;
+	  border-bottom: 1px solid black;
+	}
+
+	[class*="col-"] h2{
+	  font-weight: bold;
+	}
+
+	.control-label{
+	  color: white;
+	}
+
+	[class*="col-"] strong{
+	  margin: 33px;
+	  font-size: 24px;
+	}
+
+	[class*="col-"] {
+	  margin-bottom: 33px;
+	}
+
+	[class*="col-"] .product_box{
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
+	}
+
+}
