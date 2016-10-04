@@ -7,23 +7,23 @@
 
       <div class="field">
         <%= f.label :email, class: 'sr-only' %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control', type: 'email', placeholder: 'Email address' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control form-control-top', type: 'email', placeholder: 'Email address' %>
       </div>
 
 
       <div class="field">
         <%= f.label :password, class: 'sr-only' %> 
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control', type: 'center', placeholder: 'Password (blank to leave unchanged)' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control form-control-center', type: 'password', placeholder: 'Password (blank to leave unchanged)' %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation, class: 'sr-only' %>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', type: 'center', placeholder: 'Password confirmation' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control form-control-center', type: 'password', placeholder: 'Password confirmation' %>
       </div>
 
       <div class="field">
         <%= f.label :current_password, class: 'sr-only' %>
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', type: 'password', placeholder: 'Current password to confirm change' %>
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control form-control-bottom', type: 'password', placeholder: 'Current password to confirm change' %>
       </div>
 
       <% if @minimum_password_length %>

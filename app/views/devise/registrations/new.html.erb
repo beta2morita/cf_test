@@ -8,18 +8,18 @@
 
       <div class="field">
         <%= f.label :email, class: 'sr-only' %><br />
-        <%= f.email_field :email, autofocus: true, class: 'form-control', type: 'email', placeholder: 'Email adress' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control form-control-top', type: 'email', placeholder: 'Email adress' %>
       </div>
 
       <div class="field">
         <%= f.label :password, class: 'sr-only' %>
 
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password', type: 'center' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control form-control-center', placeholder: 'Password', type: 'password' %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation, class: 'sr-only' %>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', type: 'password', placeholder: 'Confirm password' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control form-control-bottom', type: 'password', placeholder: 'Confirm password' %>
       </div>
 
         <% if @minimum_password_length %>
