@@ -3,6 +3,8 @@
     <h2 class="form-signin-heading">Log in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
 
       <%= f.label :email, class: 'sr-only' %>
       <%= f.email_field :email, autofocus: true, class: 'form-control form-control-top', type: 'email', placeholder: 'Email address' %>

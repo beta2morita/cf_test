@@ -6,8 +6,19 @@
       <%= devise_error_messages! %>
 
       <div class="field">
+        <%= f.label :first_name, class: 'sr-only' %>
+        <%= f.text_field :first_name, autofocus: true, class: 'form-control form-control-top', placeholder: 'First name' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name, class: 'sr-only' %>
+        <%= f.text_field :last_name, autofocus: true, class: 'form-control form-control-center', placeholder: 'Last name' %>
+      </div>
+
+
+      <div class="field">
         <%= f.label :email, class: 'sr-only' %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control form-control-top', type: 'email', placeholder: 'Email address' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control form-control-center', type: 'email', placeholder: 'Email address' %>
       </div>
 
 
