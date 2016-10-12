@@ -1,20 +1,39 @@
 <%- model_class = Product -%>
 <div class="container products">
   <div class="page-header">
-    <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+    <h1><%=t '.title', :default => @product.name %></h1>
   </div>
 
   <dl class="dl-horizontal">
-    <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-    <dd><%= @product.name %></dd>
+    <dd><img class="img-responsive" src="<%=asset_path @product.image_url %>"></dd>
     <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
     <dd><%= @product.description %></dd>
     <dt><strong><%= model_class.human_attribute_name(:color) %>:</strong></dt>
-    <dd><%= @product.color %></dd>  
-    <dt><strong><%= model_class.human_attribute_name(:image_url) %>:</strong></dt>
-    <dd><%= @product.image_url %></dd>
-    <dt><strong>Image preview:</strong></dt>
-    <dd><img class="img-responsive" src="<%=asset_path @product.image_url %>"></dd>
+    <dd><%= @product.color %></dd> 
+    <dt><strong>Average rating:</strong></dt>
+    <dd>
+      <%=render :partial => 'stars', :locals => {:stars => @product.average_rating} %>    
+    </dd>
+    <%if @product.number_rating_comment > 1%>
+    <dt><strong>Highest rating:</strong></dt>
+    <dd>
+      <%= render :partial => 'stars', :locals => {:stars => @product.highest_rating_comment.rating} %></br>
+      <%= @product.highest_rating_comment.body %>   
+    </dd>
+    <dt><strong>Lowest rating:</strong></dt>
+    <dd>
+      <%= render :partial => 'stars', :locals => {:stars => @product.lowest_rating_comment.rating} %></br>
+      <%= @product.lowest_rating_comment.body %>   
+    </dd>
+    <%else%>
+      <%if @product.number_rating_comment == 1%>
+        <dt><strong>Rating:</strong></dt>
+        <dd>
+          <%= render :partial => 'stars', :locals => {:stars => @product.highest_rating_comment.rating} %></br>
+          <%= @product.highest_rating_comment.body %>   
+        </dd>
+      <%end%>
+    <%end%>
   </dl>
 
   <%= link_to t('.back', :default => t("helpers.links.back")),

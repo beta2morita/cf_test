@@ -5,178 +5,276 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-product = Product.find_or_initialize_by(id: 1)
-product.name = 'Bike No. 001'
-product.description = 'Bicycle with step-through-frame for easy mounting and dismounting.'
-product.color = 'black'
-product.image_url = 'bike_001.jpg'
-product.price = '93'
-product.save!
-product = Product.find_or_initialize_by(id: 2)
-product.name = 'Bike No. 002'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'blue/white'
-product.image_url = 'bike_002.jpg'
-product.price = '76'
-product.save!
-product = Product.find_or_initialize_by(id: 3)
-product.name = 'Bike No. 003'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'blue'
-product.image_url = 'bike_003.jpg'
-product.price = '71'
-product.save!
-product = Product.find_or_initialize_by(id: 4)
-product.name = 'Bike No. 004'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'black'
-product.image_url = 'bike_004.jpg'
-product.price = '88'
-product.save!
-product = Product.find_or_initialize_by(id: 5)
-product.name = 'Bike No. 005'
-product.description = 'Bicycle with step-through-frame for easy mounting and dismounting.'
-product.color = 'green/blue'
-product.image_url = 'bike_005.jpg'
-product.price = '49'
-product.save!
-product = Product.find_or_initialize_by(id: 6)
-product.name = 'Bike No. 006'
-product.description = 'Bicycle with step-through-frame for easy mounting and dismounting.'
-product.color = 'blue'
-product.image_url = 'bike_006.jpg'
-product.price = '49'
-product.save!
-product = Product.find_or_initialize_by(id: 7)
-product.name = 'Bike No. 007'
-product.description = 'Sporty bicycle with mountain-bike frame.'
-product.color = 'white'
-product.image_url = 'bike_007.jpg'
-product.price = '41'
-product.save!
-product = Product.find_or_initialize_by(id: 8)
-product.name = 'Bike No. 008'
-product.description = 'Sporty bicycle with mountain-bike frame.'
-product.color = 'orange'
-product.image_url = 'bike_008.jpg'
-product.price = '91'
-product.save!
-product = Product.find_or_initialize_by(id: 9)
-product.name = 'Bike No. 009'
-product.description = 'Sporty bicycle with mountain-bike frame.'
-product.color = 'silver'
-product.image_url = 'bike_009.jpg'
-product.price = '49'
-product.save!
-product = Product.find_or_initialize_by(id: 10)
-product.name = 'Bike No. 010'
-product.description = 'Sporty bicycle with mountain-bike frame.'
-product.color = 'white'
-product.image_url = 'bike_010.jpg'
-product.price = '61'
-product.save!
-product = Product.find_or_initialize_by(id: 11)
-product.name = 'Bike No. 011'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'green/yellow'
-product.image_url = 'bike_011.jpg'
-product.price = '79'
-product.save!
-product = Product.find_or_initialize_by(id: 12)
-product.name = 'Bike No. 012'
-product.description = 'Bicycle with step-through-frame for easy mounting and dismounting.'
-product.color = 'red'
-product.image_url = 'bike_012.jpg'
-product.price = '73'
-product.save!
-product = Product.find_or_initialize_by(id: 13)
-product.name = 'Bike No. 013'
-product.description = 'Bicycle with step-through-frame for easy mounting and dismounting.'
-product.color = 'black'
-product.image_url = 'bike_013.jpg'
-product.price = '93'
-product.save!
-product = Product.find_or_initialize_by(id: 14)
-product.name = 'Bike No. 014'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'blue-metallic'
-product.image_url = 'bike_014.jpg'
-product.price = '74'
-product.save!
-product = Product.find_or_initialize_by(id: 15)
-product.name = 'Bike No. 015'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'orange'
-product.image_url = 'bike_015.jpg'
-product.price = '46'
-product.save!
-product = Product.find_or_initialize_by(id: 16)
-product.name = 'Bike No. 016'
-product.description = 'Bicycle with step-through-frame for easy mounting and dismounting.'
-product.color = 'red'
-product.image_url = 'bike_016.jpg'
-product.price = '67'
-product.save!
-product = Product.find_or_initialize_by(id: 17)
-product.name = 'Bike No. 017'
-product.description = 'Sporty bicycle with mountain-bike frame.'
-product.color = 'silver'
-product.image_url = 'bike_017.jpg'
-product.price = '92'
-product.save!
-product = Product.find_or_initialize_by(id: 18)
-product.name = 'Bike No. 018'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'white'
-product.image_url = 'bike_018.jpg'
-product.price = '41'
-product.save!
-product = Product.find_or_initialize_by(id: 19)
-product.name = 'Bike No. 019'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'white'
-product.image_url = 'bike_019.jpg'
-product.price = '74'
-product.save!
-product = Product.find_or_initialize_by(id: 20)
-product.name = 'Bike No. 020'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'red'
-product.image_url = 'bike_020.jpg'
-product.price = '81'
-product.save!
-product = Product.find_or_initialize_by(id: 21)
-product.name = 'Bike No. 021'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'yellow/pink'
-product.image_url = 'bike_021.jpg'
-product.price = '93'
-product.save!
-product = Product.find_or_initialize_by(id: 22)
-product.name = 'Bike No. 022'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'silver'
-product.image_url = 'bike_022.jpg'
-product.price = '44'
-product.save!
-product = Product.find_or_initialize_by(id: 23)
-product.name = 'Bike No. 023'
-product.description = 'Bicycle for children.'
-product.color = 'black'
-product.image_url = 'bike_023.jpg'
-product.price = '58'
-product.save!
-product = Product.find_or_initialize_by(id: 24)
-product.name = 'Bike No. 024'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'red'
-product.image_url = 'bike_024.jpg'
-product.price = '64'
-product.save!
-product = Product.find_or_initialize_by(id: 25)
-product.name = 'Bike No. 025'
-product.description = 'Bicycle with classical diamond-frame.'
-product.color = 'beige'
-product.image_url = 'bike_025.jpg'
-product.price = '93'
-product.save!
+comment= Comment.find_or_initialize_by(id: 1)
+comment.user_id = '1'
+comment.body = 'This is a really disappointing bike with a weird step-through frame. It was in a bad condition. I did not like the black color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '1'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 2)
+comment.user_id = '2'
+comment.body = 'This is a really disappointing bike with a weird step-through frame. It was in a bad condition. I did not like the black color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '1'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 3)
+comment.user_id = '3'
+comment.body = 'This is not a good step-through frame-bike. The condition of this bike was not as good as expected. The black color was not exactly as on the picture. I presume due to bad lighting. The bike was too expensive.'
+comment.rating = '2'
+comment.product_id = '1'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 4)
+comment.user_id = '1'
+comment.body = 'This is a quite ordinary diamond frame bike. The condition of this bike was as advertised. The blue/white color unremarkable, which was ok for me. It was quite expensive, but still ok.'
+comment.rating = '3'
+comment.product_id = '2'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 5)
+comment.user_id = '1'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant blue color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '3'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 6)
+comment.user_id = '2'
+comment.body = 'This is a good bike with a nice diamond frame. This condition of this bike exceeded my expectation. I liked the blue color. The prive was really fair!'
+comment.rating = '4'
+comment.product_id = '3'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 7)
+comment.user_id = '1'
+comment.body = 'This is a quite ordinary step-through frame bike. The condition of this bike was as advertised. The green/blue color unremarkable, which was ok for me. You can not say this bike was overpriced.'
+comment.rating = '3'
+comment.product_id = '5'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 8)
+comment.user_id = '2'
+comment.body = 'I was looking for a step-through frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant green/blue color exceeded my expectation. This bike was a great value for money!'
+comment.rating = '5'
+comment.product_id = '5'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 9)
+comment.user_id = '3'
+comment.body = 'This is a quite ordinary step-through frame bike. The condition of this bike was as advertised. The green/blue color unremarkable, which was ok for me. You can not say this bike was overpriced.'
+comment.rating = '3'
+comment.product_id = '5'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 10)
+comment.user_id = '1'
+comment.body = 'This is a really disappointing bike with a weird step-through frame. It was in a bad condition. I did not like the blue color. It did not match the photo. You get what you pay for. Next time I would rather spend some more money.'
+comment.rating = '1'
+comment.product_id = '6'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 11)
+comment.user_id = '2'
+comment.body = 'This is a quite ordinary step-through frame bike. The condition of this bike was as advertised. The blue color unremarkable, which was ok for me. You can not say this bike was overpriced.'
+comment.rating = '3'
+comment.product_id = '6'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 12)
+comment.user_id = '1'
+comment.body = 'This is a quite ordinary mountain-bike frame bike. The condition of this bike was as advertised. The white color unremarkable, which was ok for me. You can not say this bike was overpriced.'
+comment.rating = '3'
+comment.product_id = '7'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 13)
+comment.user_id = '1'
+comment.body = 'This is a quite ordinary mountain-bike frame bike. The condition of this bike was as advertised. The orange color unremarkable, which was ok for me. It was quite expensive, but still ok.'
+comment.rating = '3'
+comment.product_id = '8'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 14)
+comment.user_id = '2'
+comment.body = 'This is a really disappointing bike with a weird mountain-bike frame. It was in a bad condition. I did not like the orange color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '8'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 15)
+comment.user_id = '1'
+comment.body = 'I was looking for a mountain-bike frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant white color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '10'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 16)
+comment.user_id = '1'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant green/yellow color exceeded my expectation. It was not the cheapest bike but a good value for money.'
+comment.rating = '5'
+comment.product_id = '11'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 17)
+comment.user_id = '2'
+comment.body = 'This is not a good diamond frame-bike. The condition of this bike was not as good as expected. The green/yellow color was not exactly as on the picture. I presume due to bad lighting. The bike was too expensive.'
+comment.rating = '2'
+comment.product_id = '11'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 18)
+comment.user_id = '3'
+comment.body = 'This is a really disappointing bike with a weird diamond frame. It was in a bad condition. I did not like the green/yellow color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '11'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 19)
+comment.user_id = '1'
+comment.body = 'This is a quite ordinary step-through frame bike. The condition of this bike was as advertised. The red color unremarkable, which was ok for me. The price was fair.'
+comment.rating = '3'
+comment.product_id = '12'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 20)
+comment.user_id = '1'
+comment.body = 'This is a really disappointing bike with a weird step-through frame. It was in a bad condition. I did not like the black color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '13'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 21)
+comment.user_id = '2'
+comment.body = 'This is a good bike with a nice step-through frame. This condition of this bike exceeded my expectation. I liked the black color. The bike was somewhat expensive but ok.'
+comment.rating = '4'
+comment.product_id = '13'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 22)
+comment.user_id = '3'
+comment.body = 'This is a quite ordinary step-through frame bike. The condition of this bike was as advertised. The black color unremarkable, which was ok for me. It was quite expensive, but still ok.'
+comment.rating = '3'
+comment.product_id = '13'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 23)
+comment.user_id = '1'
+comment.body = 'This is not a good diamond frame-bike. The condition of this bike was not as good as expected. The blue-metallic color was not exactly as on the picture. I presume due to bad lighting. The price should have been lower.'
+comment.rating = '2'
+comment.product_id = '14'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 24)
+comment.user_id = '1'
+comment.body = 'This is a good bike with a nice step-through frame. This condition of this bike exceeded my expectation. I liked the red color. The prive was really fair!'
+comment.rating = '4'
+comment.product_id = '16'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 25)
+comment.user_id = '2'
+comment.body = 'I was looking for a step-through frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant red color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '16'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 26)
+comment.user_id = '3'
+comment.body = 'I was looking for a step-through frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant red color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '16'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 27)
+comment.user_id = '4'
+comment.body = 'This is a good bike with a nice step-through frame. This condition of this bike exceeded my expectation. I liked the red color. The prive was really fair!'
+comment.rating = '4'
+comment.product_id = '16'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 28)
+comment.user_id = '1'
+comment.body = 'I was looking for a mountain-bike frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant silver color exceeded my expectation. It was not the cheapest bike but a good value for money.'
+comment.rating = '5'
+comment.product_id = '17'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 29)
+comment.user_id = '1'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant white color exceeded my expectation. This bike was a great value for money!'
+comment.rating = '5'
+comment.product_id = '18'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 30)
+comment.user_id = '2'
+comment.body = 'This is a quite ordinary diamond frame bike. The condition of this bike was as advertised. The white color unremarkable, which was ok for me. You can not say this bike was overpriced.'
+comment.rating = '3'
+comment.product_id = '18'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 31)
+comment.user_id = '1'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant white color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '19'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 32)
+comment.user_id = '2'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant white color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '19'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 33)
+comment.user_id = '3'
+comment.body = 'This is not a good diamond frame-bike. The condition of this bike was not as good as expected. The white color was not exactly as on the picture. I presume due to bad lighting. The price should have been lower.'
+comment.rating = '2'
+comment.product_id = '19'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 34)
+comment.user_id = '1'
+comment.body = 'This is a really disappointing bike with a weird diamond frame. It was in a bad condition. I did not like the red color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '20'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 35)
+comment.user_id = '1'
+comment.body = 'This is a really disappointing bike with a weird diamond frame. It was in a bad condition. I did not like the silver color. It did not match the photo. You get what you pay for. Next time I would rather spend some more money.'
+comment.rating = '1'
+comment.product_id = '22'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 36)
+comment.user_id = '2'
+comment.body = 'This is a quite ordinary diamond frame bike. The condition of this bike was as advertised. The silver color unremarkable, which was ok for me. You can not say this bike was overpriced.'
+comment.rating = '3'
+comment.product_id = '22'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 37)
+comment.user_id = '3'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant silver color exceeded my expectation. This bike was a great value for money!'
+comment.rating = '5'
+comment.product_id = '22'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 38)
+comment.user_id = '1'
+comment.body = 'I was looking for a child frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant black color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '23'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 39)
+comment.user_id = '1'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant red color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '24'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 40)
+comment.user_id = '2'
+comment.body = 'I was looking for a diamond frame bike and this is a really great one. The components of this bike were of a good quality and in a good condition. The vibrant red color exceeded my expectation. This bike was a good value for money.'
+comment.rating = '5'
+comment.product_id = '24'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 41)
+comment.user_id = '3'
+comment.body = 'This is not a good diamond frame-bike. The condition of this bike was not as good as expected. The red color was not exactly as on the picture. I presume due to bad lighting. The price should have been lower.'
+comment.rating = '2'
+comment.product_id = '24'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 42)
+comment.user_id = '1'
+comment.body = 'This is a quite ordinary diamond frame bike. The condition of this bike was as advertised. The beige color unremarkable, which was ok for me. It was quite expensive, but still ok.'
+comment.rating = '3'
+comment.product_id = '25'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 43)
+comment.user_id = '2'
+comment.body = 'This is a quite ordinary diamond frame bike. The condition of this bike was as advertised. The beige color unremarkable, which was ok for me. It was quite expensive, but still ok.'
+comment.rating = '3'
+comment.product_id = '25'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 44)
+comment.user_id = '3'
+comment.body = 'This is a good bike with a nice diamond frame. This condition of this bike exceeded my expectation. I liked the beige color. The bike was somewhat expensive but ok.'
+comment.rating = '4'
+comment.product_id = '25'
+comment.save!
+comment= Comment.find_or_initialize_by(id: 45)
+comment.user_id = '4'
+comment.body = 'This is a really disappointing bike with a weird diamond frame. It was in a bad condition. I did not like the beige color. It did not match the photo. This bike was not only of bad quality but also very overpriced.'
+comment.rating = '1'
+comment.product_id = '25'
+comment.save!
+
+
+

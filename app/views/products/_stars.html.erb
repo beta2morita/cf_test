@@ -1,0 +1,13 @@
+<%if stars.blank? %>
+ 	<p style="min-height: 0; margin: 0;">This product has not been rated.</p>
+ 	<%else%>
+  <%((stars*2).round(0)/2).floor.to_i.times do%>
+    <i class="glyphicon glyphicon-star"></i>
+  <%end%> 
+  <%((((stars*2).round(0)/2)%1)*2).to_i.times do%>
+    <i class="glyphicon glyphicon-star half"></i>
+  <%end%>
+  <%(5-(stars*2).round/2.floor-((((stars*2).round(0))/2)%1)*2).to_i.times do%>
+      <i class="glyphicon glyphicon-star empty"></i>
+  <%end%>
+<%end%>          
