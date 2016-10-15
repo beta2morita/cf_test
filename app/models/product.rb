@@ -11,7 +11,7 @@ class Product < ApplicationRecord
 	end
 
 	def average_rating
-		self.comments.rating_average
+		comments.average(:rating).to_f
 	end
 
 	def number_rating_comment
