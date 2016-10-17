@@ -18,4 +18,6 @@ class Product < ApplicationRecord
 		self.comments.rating_desc.count
 	end
 
+	validates :name, presence: true
+
 end

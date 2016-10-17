@@ -7,19 +7,19 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       if Rails.env.production?
-        @products = Product.where("description ilike ? OR color ilike ?", "%#{search_term}%", "%#{search_term}%")
+        @products = Product.where("description ilike ? OR color ilike ?", "%#{search_term}%", "%#{search_term}%").paginate(:page => params[:page], :per_page => 12)
       else
-        @products = Product.where("description LIKE ? OR color LIKE ?", "%#{search_term}%", "%#{search_term}%")
+        @products = Product.where("description LIKE ? OR color LIKE ?", "%#{search_term}%", "%#{search_term}%").paginate(:page => params[:page], :per_page => 12)
       end        
     else
-      @products = Product.all
+      @products = Product.all.paginate(:page => params[:page], :per_page => 12)
     end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC")
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new
