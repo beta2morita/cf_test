@@ -5,8 +5,8 @@ describe Order do
   context "user or product are missing" do
     
     before do
-      @product = Product.create!(name: "test bike")
-      @user = User.create!(last_name: "Tester", first_name: "Rspec", email: "beta.2.morita@gmail.com", password: "betatest")
+      @product = FactoryGirl.build(:product)
+      @user = FactoryGirl.build(:user)
     end
 
     it "not valid because user and product missing" do
