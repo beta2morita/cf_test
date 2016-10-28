@@ -12,6 +12,11 @@
     <dd><%= @product.color %></dd> 
     <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
     <dd><%= number_to_currency(@product.price, :unit => "€") %></dd> 
+    <br>
+    <dd><%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %></dd>
+    <br>
     <dt><strong>Average rating:</strong></dt>
     <dd>
       <div class="rated" data-score="<%= @product.average_rating %>"></div>  
