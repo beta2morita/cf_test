@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  post 'payments/create'
+
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
   
   resources :users
@@ -6,6 +10,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+
+  resources :payments
   
   get 'static_pages/about'
 

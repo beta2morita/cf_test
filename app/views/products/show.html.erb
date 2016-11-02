@@ -13,9 +13,13 @@
     <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
     <dd><%= number_to_currency(@product.price, :unit => "€") %></dd> 
     <br>
-    <dd><%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-    <% end %></dd>
+    <% if user_signed_in? %>
+      <dd><%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %></dd>
+    <% else %>
+      <dd><%= link_to('Login to buy', new_user_session_path, :class => 'stripe-button') %></dd>
+    <% end %>
     <br>
     <dt><strong>Average rating:</strong></dt>
     <dd>

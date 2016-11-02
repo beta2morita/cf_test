@@ -2,8 +2,11 @@
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-image="<%=asset_path 'logo_sq_b.png' %>"
+  data-email="<%=current_user.email %>"
   data-name="Bike Berlin"
   data-description="<%= @product.name %>"
-  data-amount="<%= @product.price*100 %>"
+  data-amount="<%= (@product.price*100).to_i %>"
   data-currency="eur">
 </script>
+<%= hidden_field_tag(:product_id, @product.id) %>
+<%= hidden_field_tag(:user_id, current_user.id) %>

@@ -13,6 +13,23 @@ header, footer {
 	color: #fff;
 }
 
+.alert-info {
+	background-color: red;
+	border-color: white;
+	color: white;
+}
+
+.notice {
+		margin-bottom: 5px;
+		margin-top: 5px;
+		padding: 5px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
 a#logo {
 	display: block;
 	max-width: 508px;

@@ -5,6 +5,7 @@ FactoryGirl.define do
 
   factory :product do
     name
+    price 99.99
   end
 
 end
