@@ -1,11 +1,11 @@
 <% if signed_in? %>
 
   <dt><strong>Add a review</strong></dt></br>
-  <%= form_for([@product, @product.comments.build]) do |f| %>
+  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
     <dt><strong>
       <%= f.label :body, "Comment:" %></strong></dt>
       <dd>
-      <%= f.text_area :body, class: "form-control" %>
+      <%= f.text_area :body, class: "form-control new_comment_text" %>
     </dd>
     <dt><strong>
       <%= f.label :rating, "Rating:" %></strong></dt>

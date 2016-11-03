@@ -34,13 +34,16 @@
         <br>
         <dt><strong>Average rating:</strong></dt>
         <dd>
-          <div class="rated" data-score="<%= @product.average_rating %>"></div>  
+          <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div>  
         </dd>
       </div><!--end col-sm-6-->
     </div><!--end row-->
 
     <%= render :partial => 'new_comment' %>
+    <dt><strong>Comments:</strong></dt>
+<div class="product-reviews">
     <%= render :partial => 'comments' %>
+</div>    
   </dl>
 
 
