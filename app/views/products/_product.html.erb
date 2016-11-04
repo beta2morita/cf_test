@@ -1,15 +1,17 @@
 <%- model_class = Product -%>
 <div class="col-sm-4 col-md-3">
   <div class="product_box">
-    <img class="img-responsive" src="<%=asset_path product.image_url %>" alt="<%=asset_path product.image_url %>">
-    <h2><%= link_to product.name, product %></h2>
-    <p style="min-height: 80px;"><%= product.description %></p>
-    <div style="border-bottom: 1px solid black;">
-      <p>Average rating:</p>
-      <div style="min-height: 50px;">
-      <div class="rated" data-score="<%= product.average_rating %>"></div> 
-    </div>
-    </div>
-    <strong><%= number_to_currency(product.price, :unit => "€") %></strong>
+    <% cache ["v1", product] do %>
+      <img class="img-responsive" src="<%=asset_path product.image_url %>" alt="<%=asset_path product.image_url %>">
+      <h2><%= link_to product.name, product %></h2>
+      <p style="min-height: 80px;"><%= product.description %></p>
+      <div style="border-bottom: 1px solid black;">
+        <p>Average rating:</p>
+        <div style="min-height: 50px;">
+        <div class="rated" data-score="<%= product.average_rating %>"></div> 
+      </div>
+      </div>
+      <strong><%= number_to_currency(product.price, :unit => "€") %></strong>
+    <% end %><!--end cache product -->
   </div>
 </div><!-- /col -->

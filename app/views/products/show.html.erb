@@ -4,19 +4,18 @@
   <dl class="dl-horizontal" style="max-width: 1000px;">
 
     <div class="page-header">
+      <% cache @product do %>
       <h1><%=t '.title', :default => @product.name %></h1>
     </div>
 
     <div class="row">
       <div class = "col-sm-6 col-sm-push-6">
         <div style="max-width: 500px; margin: 0 auto">
-        <img class="img-responsive img-zoom" src="<%=asset_path @product.image_url %>">
-      </div>
-
+          <img class="img-responsive img-zoom" src="<%=asset_path @product.image_url %>">
+        </div>
       </div><!--end col-sm-6-->
 
       <div class="col-sm-6 col-sm-pull-6">
-
         <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
         <dd><%= @product.description %></dd>
         <dt><strong><%= model_class.human_attribute_name(:color) %>:</strong></dt>
@@ -24,6 +23,7 @@
         <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
         <dd><%= number_to_currency(@product.price, :unit => "€") %></dd> 
         <br>
+        <% end %><!-- end cache product -->
         <% if user_signed_in? %>
           <dd><%= form_tag "/payments/create" do %>
               <%= render partial: "shared/stripe_checkout_button" %>
@@ -41,9 +41,9 @@
 
     <%= render :partial => 'new_comment' %>
     <dt><strong>Comments:</strong></dt>
-<div class="product-reviews">
-    <%= render :partial => 'comments' %>
-</div>    
+    <div class="product-reviews">
+        <%= render :partial => 'comments' %>
+    </div>    
   </dl>
 
 
