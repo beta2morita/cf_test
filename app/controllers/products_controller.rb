@@ -6,12 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:q]
-      search_term = params[:q]
-      if Rails.env.production?
-        @products = Product.where("description ilike ? OR color ilike ?", "%#{search_term}%", "%#{search_term}%").paginate(:page => params[:page], :per_page => 12)
-      else
-        @products = Product.where("description LIKE ? OR color LIKE ?", "%#{search_term}%", "%#{search_term}%").paginate(:page => params[:page], :per_page => 12)
-      end        
+      @products = Product.search(params[:q]).paginate(:page => params[:page], :per_page => 12)
     else
       @products = Product.all.paginate(:page => params[:page], :per_page => 12)
     end
