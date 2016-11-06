@@ -40,6 +40,9 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
+  # Config redis cache store
+  config.cache_store = :redis_store, "redis://localhost:6379/0/cache"
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
@@ -47,6 +50,8 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+  
 
   class Application < Rails::Application
     config.web_console.whitelisted_ips = '192.168.222.50', '192.168.223.226'
