@@ -12,6 +12,8 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  config.app_generators.javascript_engine = :javascript
+
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
@@ -33,6 +35,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { :host => '0.0.0.0:8000'}
 
+  config.action_cable.allowed_request_origins = ['http://192.168.200.65:8000']
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
