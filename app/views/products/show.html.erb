@@ -8,7 +8,7 @@
       <h1><%=t '.title', :default => @product.name %></h1>
     </div>
 
-    <div class="row">
+    <div class="row" data-product-id="<%= @product.id %>">
       <div class = "col-sm-6 col-sm-push-6">
         <div style="max-width: 500px; margin: 0 auto">
           <img class="img-responsive img-zoom" src="<%=asset_path @product.image_url %>">
@@ -42,8 +42,7 @@
     <%= render :partial => 'new_comment' %>
     <dt><strong>Comments:</strong></dt>
     <div class="product-reviews">
-      <dd><div class="notice" style="display:none" role="alert">A new comment was posted!</div></dd>
-        <%= render :partial => 'comments' %>
+           <%= render :partial => 'comments' %>
     </div>    
   </dl>
 

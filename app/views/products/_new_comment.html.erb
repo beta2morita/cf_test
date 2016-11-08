@@ -1,6 +1,6 @@
 <% if signed_in? %>
 
-  <dt><strong>Add a review</strong></dt></br>
+  <dt><strong>Add a review</strong></dt><br/>
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
     <dt><strong>
       <%= f.label :body, "Comment:" %></strong></dt>
@@ -14,7 +14,10 @@
     </dd>
     <dd>
       <%= f.submit "Submit", class: "btn btn-default" %>
-    </dd></br>
+    </dd><br/>
+
+    <dd><div class="notice" style="display:none" role="alert">A new comment was posted!</div></dd>
+
   <% end %>
 
 <% end %>
